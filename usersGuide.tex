@@ -1,0 +1,22 @@
+\documentclass[11pt,oneside]{book}%
+\usepackage[spanish,activeacute]{babel}%idioma document
+\usepackage[utf8]{inputenc}%set input encoding
+\usepackage[root=./base/, rootthemes=template/, theme=revistaUD]{./base/lib/designAcademycos}
+\usepackage[T1]{fontenc}
+\usepackage[light,math]{kurier}%http://www.tug.dk/FontCatalogue/
+\usepackage{src/initialVariables}
+\usepackage{src/ownCommands}
+\def\usersGuide{usersGuide}%carpeta de articulo
+\def\usersGuideImages{articles/\usersGuide/images}
+\defaultbibliography{referencesGlobal}
+\usepackage{\pathroot/plugin/highlighting}
+\usepackage{\pathroot/plugin/marginsPrint}
+\usepackage{articles/\usersGuide/load}
+\usepackage{lipsum}
+\begin{document}
+	\frontmatter
+		\import{\paththeme/}{cover.tex} 
+		\tableofcontents
+	\mainmatter
+	\import{articles/\usersGuide/}{article.tex}
+\end{document}
